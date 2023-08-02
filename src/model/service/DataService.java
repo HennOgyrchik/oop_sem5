@@ -1,11 +1,12 @@
 package model.service;
 
-import model.data.User;
+import model.data.Student;
+import model.data.Teacher;
 
-import java.util.Calendar;
-import java.util.List;
+import java.util.Scanner;
 
 public interface DataService {
-    User createUser ();
-    List<User> readData();
+    Student createStudent (Scanner in);
+    Teacher createTeacher (Scanner in);
+
 }

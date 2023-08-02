@@ -1,20 +1,26 @@
 package model.service;
 
-import model.data.User;
+import model.data.Student;
+import model.data.Teacher;
 import view.UserView;
 
-import java.util.List;
+import java.util.Scanner;
+
 
 public class UserService implements DataService{
 
+
     @Override
-    public User createUser() {
-        UserView<User> userView= new UserView<>();
-        return userView.addUser();
+    public Student createStudent(Scanner in) {
+        UserView<Student> userView= new UserView<>();
+        return userView.createStudent(in);
     }
 
     @Override
-    public List<User> readData() {
-        return null;
+    public Teacher createTeacher(Scanner in) {
+        UserView<Teacher> userView= new UserView<>();
+        return userView.createTeacher(in);
     }
+
+
 }

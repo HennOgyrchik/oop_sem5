@@ -3,10 +3,14 @@ package model.service;
 import model.data.Student;
 import model.data.Teacher;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Calendar;
+
 
 public interface DataService {
-    Student createStudent (Scanner in);
-    Teacher createTeacher (Scanner in);
+    Student createStudent (String name, String lastName, Calendar birthday);
+    Teacher createTeacher (String name, String lastName, Calendar birthday);
 
+    ArrayList<Teacher> getTeacherList();
+    ArrayList<Student> getStudentList();
 }
